@@ -1,0 +1,3 @@
+﻿  Header.cpp
+f:\project\hk2\tuan 4 - file\1612380\1612380\header.cpp(30): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'int', possible loss of data
+  1612380.vcxproj -> F:\Project\HK2\Tuan 4 - File\1612380\Debug\1612380.exe
