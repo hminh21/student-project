@@ -1,0 +1,15 @@
+Rabin-Karp
+1. RABIN: true, pos=98, 6
+2. EXAMPLE: true, pos=71, 11
+3. TEST: true, pos=90, 6
+4. STRINGS: fail
+
+KMP
+1. RABIN:true, pos=98
++ NEXT: -1 0 0 0 0 
+2. EXAMPLE:true, pos=71
++ NEXT: -1 0 0 0 0 0 -1 
+3. TEST:true, pos=90
++ NEXT: -1 0 0 -1 
+4. STRINGS:fail
++ NEXT: -1 0 0 0 0 0 -1 
