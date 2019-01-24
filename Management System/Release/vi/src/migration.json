@@ -1,0 +1,326 @@
+[
+  {	
+		"srcPath":"/DevExpress.Dashboard.Win/DataSourceBrowser/CalculatedField/CalculatedFieldExpressionEditorForm.resx",
+		"srcKey":"CountDistinctAggregate.Description",
+		"destPath":"/DevExpress.Dashboard.Web/ResFiles/CalculatedField/CalculatedFieldExpressionEditorForm.resx",
+        "destKey":"CountDistinctAggregate.Description"
+	},
+	{	
+		"srcPath":"/DevExpress.Dashboard.Win/DataSourceBrowser/CalculatedField/CalculatedFieldExpressionEditorForm.resx",
+		"srcKey":"MedianAggregate.Description",
+		"destPath":"/DevExpress.Dashboard.Web/ResFiles/CalculatedField/CalculatedFieldExpressionEditorForm.resx",
+        "destKey":"MedianAggregate.Description"
+	},
+	{	
+		"srcPath":"/DevExpress.Dashboard.Win/DataSourceBrowser/CalculatedField/CalculatedFieldExpressionEditorForm.resx",
+		"srcKey":"StdDevAggregate.Description",
+		"destPath":"/DevExpress.Dashboard.Web/ResFiles/CalculatedField/CalculatedFieldExpressionEditorForm.resx",
+        "destKey":"StdDevAggregate.Description"
+	},
+  {
+    "srcPath": "/DevExpress.XtraPrinting/Preview/PageSetupEditorForm.resx",
+    "srcKey": "lbMargins.Text",
+    "destPath": "/DevExpress.XtraPrinting/Preview/PageSetupEditorForm.resx",
+    "destKey": "grpBoxPageMargins.Text"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupInfo",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupInfo"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageReview",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageReview"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupDocumentComment",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupDocumentComment"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageCategoryHeaderFooterTools",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageCategoryHeaderFooterTools"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_NoFill",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_NoFill"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupPageSetup",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupPageSetup"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageLayout",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageLayout"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupTableOfContents",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupTableOfContents"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PagePageLayout",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PagePageLayout"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupFloatingPictureToolsShapeStyles",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupFloatingPictureToolsShapeStyles"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageFile",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageFile"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupDocumentViews",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupDocumentViews"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupShow",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupShow"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_NoOutline",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_NoOutline"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooterToolsDesignClose",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooterToolsDesignClose"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupDocumentLanguage",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupDocumentLanguage"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageView",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageView"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageMailings",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageMailings"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupMailMerge",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupMailMerge"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupFloatingPictureToolsArrange",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupFloatingPictureToolsArrange"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageHeaderFooterToolsDesign",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageHeaderFooterToolsDesign"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupLinks",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupLinks"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageCategoryFloatingPictureTools",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageCategoryFloatingPictureTools"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupSymbols",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupSymbols"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageHome",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageHome"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupFont",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupFont"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageReferences",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageReferences"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupStyles",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupStyles"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupClipboard",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupClipboard"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooterToolsDesignNavigation",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooterToolsDesignNavigation"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupIllustrations",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupIllustrations"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooter",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooter"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupPageBackground",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupPageBackground"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupZoom",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupZoom"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooterToolsDesignOptions",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupHeaderFooterToolsDesignOptions"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupCommon",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupCommon"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_ColorAutomatic",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_ColorAutomatic"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupCaptions",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupCaptions"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupTables",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupTables"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupEditing",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupEditing"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupText",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupText"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_NoColor",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_NoColor"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupDocumentProofing",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupDocumentProofing"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupParagraph",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupParagraph"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupPages",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupPages"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupDocumentProtection",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupDocumentProtection"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_GroupDocumentTracking",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_GroupDocumentTracking"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_Formatting",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_Formatting"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageInsert",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageInsert"
+  },
+  {
+    "srcPath": "/DevExpress.XtraRichEdit.Extensions/LocalizationRes.resx",
+    "srcKey": "RichEditExtensionsStringId.Caption_PageFloatingObjectPictureToolsFormat",
+    "destPath": "/DevExpress.RichEdit.Core/LocalizationRes.resx",
+    "destKey": "RichEditExtensionsStringId.Caption_PageFloatingObjectPictureToolsFormat"
+  }
+]
