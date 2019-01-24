@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 28c744a95fc15b84695a4cee90e8a8cc
+timeCreated: 1544107245
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dialogue-01_0
+    21300002: dialogue-01_1
+    21300004: dialogue-01_2
+    21300006: dialogue-01_3
+    21300008: dialogue-01_4
+    21300010: dialogue-01_5
+    21300012: dialogue-01_6
+    21300014: dialogue-01_7
+    21300016: dialogue-01_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dialogue-01_0
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 2715
+        width: 1771
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 2111
+        width: 1759
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2013
+        width: 1464
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_3
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1998
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1998
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1664
+        width: 1650
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_6
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1194
+        width: 1705
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_7
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 588
+        width: 1752
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dialogue-01_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 47
+        width: 1715
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

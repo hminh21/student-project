@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: e88be7e305c72ae46b5b750837d86171
+timeCreated: 1543829349
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Map Avatars_0
+    21300002: Map Avatars_1
+    21300004: Map Avatars_2
+    21300006: Map Avatars_3
+    21300008: Map Avatars_4
+    21300010: Map Avatars_5
+    21300012: Map Avatars_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Map Avatars_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1497
+        width: 948
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Map Avatars_1
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1504
+        width: 948
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Map Avatars_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 901
+        width: 948
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Map Avatars_3
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1024
+        width: 170
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Map Avatars_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 344
+        width: 948
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Map Avatars_5
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 344
+        width: 948
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Map Avatars_6
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 79
+        width: 555
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

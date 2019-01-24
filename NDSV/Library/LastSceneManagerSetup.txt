@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/NormalplayScene/Scenes/FinalPlayScenes/OutDoor.unity
+  isLoaded: 1
+  isActive: 1
