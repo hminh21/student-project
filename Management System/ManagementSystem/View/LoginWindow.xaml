@@ -1,0 +1,82 @@
+﻿<Window xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"  xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  x:Class="ManagementSystem.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        Title="ỨNG DỤNG QUẢN LÝ KINH DOANH" Height="500" Width="500" WindowStartupLocation="CenterScreen" Name="loginWindow"
+        DataContext="{StaticResource LoginVM}">
+    
+    <Grid Background="WhiteSmoke">
+        <Grid Height="300" Width="400" Background="White">
+            <Border x:Name="TopAndLeft" BorderThickness="3,3,0,0" BorderBrush="{x:Static SystemColors.ControlLightBrush}">
+                <Border x:Name="BottomAndRight" BorderThickness="0,0,3,3" BorderBrush="{x:Static SystemColors.ControlDarkBrush}">
+                    <ContentPresenter/>
+                </Border>
+            </Border>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="250">
+                <Grid.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="15 15 15 15"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--Tên đăng nhập-->
+                <Grid Grid.Row="0">
+                    <!-- Chữ hint -->
+                    <TextBlock Text=" Tên đăng nhập"  FontSize="30" VerticalAlignment="Center"
+                       Foreground="LightSteelBlue" IsHitTestVisible="False">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName = txtUsername }" Value="">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    
+                    <!-- textbox -->
+                    <TextBox x:Name="txtUsername" Text="{Binding Username}"  FontSize="30"  Background="Transparent" Foreground="Black" BorderThickness="0 0 0 1" />
+
+                </Grid>
+
+                <!--Mật khẩu-->
+                <Grid Grid.Row="1">
+                    <!-- Chữ hint -->
+                    <TextBlock x:Name="hintPassword" FontSize="30" VerticalAlignment="Center"
+                       Foreground="LightSteelBlue">Mật khẩu</TextBlock>
+                    <!--passwordbox-->
+                    <PasswordBox x:Name="txtPassword" FontSize="30" Background="Transparent" BorderThickness="0 0 0 1" PasswordChanged="txtPassword_PasswordChanged">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PasswordChanged">
+                                <!-- lí trigger khi password thay đổi thì chạy command PasswordChangedCommand-->
+                                <i:InvokeCommandAction Command="{Binding PasswordChangedCommand}" CommandParameter="{Binding ElementName=txtPassword}"/>
+                                <!-- Passwordbox không thuộc dependency property nên không thể binding trực tiếp mà phải dùng event trigger để bắt sự kiện txtPassword thay đổi-->
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </PasswordBox>
+
+                </Grid>
+
+                <!--Button-->
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <dx:SimpleButton Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=loginWindow}" Grid.Column="0" Width="150" Content="Đăng nhập" FontSize="18" Glyph="{dx:DXImage Image=BOCustomer_32x32.png}"></dx:SimpleButton>
+                    <dx:SimpleButton Command="{Binding CloseCommand}" CommandParameter="{Binding ElementName=loginWindow}" Grid.Column="1" Width="150" Content="Thoát" FontSize="18" Glyph="{dx:DXImage Image=Close_32x32.png}" />
+
+                </Grid>
+
+            </Grid>
+        </Grid>    
+    </Grid>
+</Window>

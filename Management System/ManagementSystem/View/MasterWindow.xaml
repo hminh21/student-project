@@ -1,0 +1,60 @@
+﻿<Window xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"  xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lex="http"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="ManagementSystem.MasterWindow"
+        Title="Sản phẩm" Height="500" Width="1000" WindowStartupLocation="CenterScreen"
+        Name="masterWindow"
+        DataContext="{StaticResource MasterVM}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"></RowDefinition>
+            <RowDefinition Height="55"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Field text-->
+        <Grid Grid.Row="0" Margin="5">
+            <WrapPanel>
+                <!--Tên sản phẩm-->
+                <dxe:TextEdit Text="{Binding DisplayName}" Width="200" Height="45" FontSize="15" Margin="70,0,40,0" NullText="Tên sản phẩm"></dxe:TextEdit>
+                <!--Loại sản phẩm-->
+                <dxe:ComboBoxEdit Text="{Binding CatName}" Width="150" FontSize="15" Margin="0,0,50,0" NullText="Loại sản phẩm">
+                    <dxe:ComboBoxEditItem Content="Áo" FontSize="15"></dxe:ComboBoxEditItem>
+                    <dxe:ComboBoxEditItem Content="Quần" FontSize="15"></dxe:ComboBoxEditItem>
+                    <dxe:ComboBoxEditItem Content="Giày" FontSize="15"></dxe:ComboBoxEditItem>
+                </dxe:ComboBoxEdit>
+                <!--Giá sản phẩm-->
+                <dxe:TextEdit Text="{Binding RetailPrice}" Width="200" Height="45" FontSize="15" Margin="0,0,5,0" NullText="Giá gốc"></dxe:TextEdit>  
+                <!--Đơn vị-->
+                <TextBlock Text="VNĐ" Width="35" FontSize="15" Margin="0,0,40,0" VerticalAlignment="Center"></TextBlock>
+                <!--Số lượng-->
+                <dxe:TextEdit Text="{Binding Quantity}" Width="100" Height="45" FontSize="15" Margin="0,0,40,0" NullText="Số lượng"></dxe:TextEdit>
+            </WrapPanel>
+        </Grid>
+
+        <!--Button-->
+        <Grid Grid.Row="1" Margin="5">
+            <WrapPanel>
+                <dx:SimpleButton Content="Xem chi tiết" Command="{Binding WatchCommand}" Height="35" Width="120" Margin="60,5,60,5" Glyph="{dx:DXImage Image=SelectDataMember_16x16.png}" GlyphAlignment="Left"/>
+                <dx:SimpleButton Content="Thêm" Command="{Binding AddCommand}" Height="35" Width="120" Margin="5,5,60,5" Glyph="{dx:DXImage Image=AddNewDataSource_16x16.png}"/>
+                <dx:SimpleButton Content="Xóa" Command="{Binding DeleteCommand}" Height="35" Width="120" Margin="5,5,60,5" Glyph="{dx:DXImage Image=DeleteDataSource_16x16.png}"/>
+                <dx:SimpleButton Content="Sửa" Command="{Binding UpdateCommand}" Height="35" Width="120" Margin="5,5,60,5" Glyph="{dx:DXImage Image=EditDataSource_16x16.png}"/>
+                <dx:SimpleButton Content="Excel" Command="{Binding ImportCommand}" Height="35" Width="120" Margin="5,5,40,5" Glyph="{dx:DXImage Image=AddNewDataSource_32x32.png}"/>              
+            </WrapPanel>
+        </Grid>
+             
+        <!--Header-->
+        <Grid Grid.Row="2" Margin="5">
+            <dxg:GridControl DesignTimeDataSourceRowCount="0" ItemsSource="{Binding MasterDataList}" SelectedItem="{Binding SelectedItem, Mode= OneWayToSource}">
+                <dxg:GridControl.View>
+                    <dxg:TableView AllowPaging="True" PageSize="8" SearchPanelCriteriaOperatorType="And" ShowSearchPanelMode="Always" ShowSearchPanelFindButton="True" SearchPanelFindMode="FindClick" ShowGroupPanel="False" FocusedRow=""/>
+                </dxg:GridControl.View>
+                <dxg:GridColumn Header= "STT" Binding="{Binding NumercialOrder}" Width="100" HorizontalHeaderContentAlignment="Center" UnboundType="Integer" FilterPopupMode="Excel" />
+                <dxg:GridColumn Header ="Tên sản phẩm" Binding="{Binding Product.DisplayName}" Width="400" HorizontalHeaderContentAlignment="Center" UnboundType="String" FilterPopupMode="Custom"/>
+                <dxg:GridColumn Header ="Loại sản phẩm" Binding="{Binding CatName}" Width="200" HorizontalHeaderContentAlignment="Center" UnboundType="String" FilterPopupMode="CheckedList"/>
+                <dxg:GridColumn Header ="Số lượng" Binding="{Binding Product.Quantity}" Width="150" HorizontalHeaderContentAlignment="Center" UnboundType="Integer" FilterPopupMode= "Excel"/>
+            </dxg:GridControl>
+        </Grid>
+    </Grid>
+</Window>

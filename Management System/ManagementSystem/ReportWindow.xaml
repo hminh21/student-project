@@ -1,0 +1,698 @@
+﻿<Window xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard" xmlns:local="clr-namespace:ManagementSystem" xmlns:dxrud="http://schemas.devexpress.com/winfx/2008/xaml/reports/userdesigner" xmlns:Model="clr-namespace:ManagementSystem.Model" xmlns:ComponentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase" x:Class="ManagementSystem.ReportWindow"
+        Title="Thống kê" Height="500" Width="1000"
+        x:Name="reportWindow"    
+        WindowStartupLocation="CenterScreen"
+        DataContext="{StaticResource ReportVM}">
+
+    <Grid>
+        <dx:DXTabControl>
+            <dx:DXTabItem x:Name="tabMaster" Header="Tồn kho" Width="200" Glyph="{dx:DXImage Image=BOProductGroup_32x32.png}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Cột 1-->
+                    <Grid Grid.Column="0">
+                        <dxc:ChartControl>
+                            <dxc:ChartControl.CrosshairOptions>
+                                <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                            </dxc:ChartControl.CrosshairOptions>
+                            <dxc:ChartControl.Titles>
+                                <dxc:Title Content="Thống kê loại sản phẩm" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            </dxc:ChartControl.Titles>
+                            <dxc:XYDiagram2D>    
+                                <dxc:XYDiagram2D.AxisX>
+                                    <dxc:AxisX2D>
+                                        <dxc:AxisX2D.QualitativeScaleOptions>
+                                            <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                        </dxc:AxisX2D.QualitativeScaleOptions>
+                                    </dxc:AxisX2D>
+                                </dxc:XYDiagram2D.AxisX>
+                                <dxc:BarSideBySideSeries2D ArgumentDataMember="DisplayName" ValueDataMember="Quantity" DataSource="{Binding ReportDataList.CategoryList}" ColorEach="True" ArgumentScaleType="Qualitative" LabelsVisibility="True">
+                                    <dxc:BarSideBySideSeries2D.Label>
+                                        <dxc:SeriesLabel TextPattern="{}{V}" dxc:BarSideBySideSeries2D.LabelPosition="Outside"></dxc:SeriesLabel>
+                                    </dxc:BarSideBySideSeries2D.Label>
+                                </dxc:BarSideBySideSeries2D>
+                            </dxc:XYDiagram2D>
+                        </dxc:ChartControl>
+                    </Grid>
+                    <!--Cột 2-->
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <!--Áo-->
+                        <Grid Grid.Row ="0">
+                            <dxc:ChartControl>
+                                <dxc:ChartControl.Titles>
+                                </dxc:ChartControl.Titles>
+                                <dxc:SimpleDiagram2D>
+                                    <dxc:PieSeries2D ArgumentDataMember="DisplayName" ValueDataMember="Quantity" DataSource="{Binding ReportDataList.ShirtList}" HoleRadiusPercent="0" LabelsVisibility="True">
+                                        <dxc:PieSeries2D.Label>
+                                            <dxc:SeriesLabel TextPattern="{}{A}"></dxc:SeriesLabel>
+                                        </dxc:PieSeries2D.Label>
+                                    </dxc:PieSeries2D>
+                                </dxc:SimpleDiagram2D>
+                            </dxc:ChartControl>
+                            <TextBlock Text="Số lượng áo" FontSize="15"  Width="100" Height="40" Foreground="#FF0072C6" Margin="383,0,0,100"></TextBlock>
+                        </Grid>
+
+                        <!--Quần-->
+                        <Grid Grid.Row="1">
+                            <dxc:ChartControl>
+                                <dxc:ChartControl.Titles>
+                                </dxc:ChartControl.Titles>
+                                <dxc:SimpleDiagram2D>
+                                    <dxc:PieSeries2D ArgumentDataMember="DisplayName" ValueDataMember="Quantity" DataSource="{Binding ReportDataList.PantsList}" HoleRadiusPercent="0" LabelsVisibility="True">
+                                        <dxc:PieSeries2D.Label>
+                                            <dxc:SeriesLabel TextPattern="{}{A}"></dxc:SeriesLabel>
+                                        </dxc:PieSeries2D.Label>
+                                    </dxc:PieSeries2D>
+                                </dxc:SimpleDiagram2D>
+                            </dxc:ChartControl>
+                            <TextBlock Text="Số lượng quần" FontSize="15"  Width="100" Height="40" Foreground="#FF0072C6" Margin="373,0,10,100"></TextBlock>
+                        </Grid>
+
+                        <!--Giày-->
+                        <Grid Grid.Row="2">
+                            <dxc:ChartControl>
+                                <dxc:ChartControl.Titles>
+                                </dxc:ChartControl.Titles>
+                                <dxc:SimpleDiagram2D>
+                                    <dxc:PieSeries2D ArgumentDataMember="DisplayName" ValueDataMember="Quantity" DataSource="{Binding ReportDataList.ShoesList}" HoleRadiusPercent="0" LabelsVisibility="True">
+                                        <dxc:PieSeries2D.Label>
+                                            <dxc:SeriesLabel TextPattern="{}{A}"></dxc:SeriesLabel>
+                                        </dxc:PieSeries2D.Label>
+                                    </dxc:PieSeries2D>
+                                </dxc:SimpleDiagram2D>
+                            </dxc:ChartControl>
+                            <TextBlock Text="Số lượng giày" FontSize="15"  Width="100" Height="40" Foreground="#FF0072C6" Margin="373,0,10,100"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem x:Name="tabTransaction" Header="Giao dịch" Width="200" Glyph="{dx:DXImage Image=BOOrder_32x32.png}">
+                <dx:DXTabControl>
+                    <dx:DXTabItem x:Name="Day" Header="Theo ngày" Glyph="{dx:DXImage Image=DayView_32x32.png}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            
+                            <!--Toolbar-->
+                            <Grid Grid.Row="0"> 
+                                <WrapPanel>
+                                    <TextBlock Text="Ngày" FontSize="20" Margin="0,0,15,0"></TextBlock>
+                                    <dxe:ComboBoxEdit Text="{Binding Time}" Height="30" Width="100" Margin="0,0,30,0">
+                                        <dxe:ComboBoxEditItem Content="1" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="2" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="3" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="4" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="5" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="6" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="7" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="8" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="9" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="10" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="11" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="12" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="13" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="14" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="15" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="16" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="17" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="18" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="19" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="20" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="21" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="22" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="23" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="24" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="25" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="26" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="27" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="28" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="29" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="30" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="31" FontSize="15"></dxe:ComboBoxEditItem>
+                                    </dxe:ComboBoxEdit>
+                                    <dx:SimpleButton Command="{Binding AnalyzeCommand}" CommandParameter="{Binding ElementName=Day}" Width="120" Content="Thống kê" Glyph="{dx:DXImage Image=PreviewChart_32x32.png}"></dx:SimpleButton>
+                                </WrapPanel>
+                            </Grid>
+                            <!--Biểu đồ-->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                
+                                <!--Master-->
+                                <Grid Grid.Column="0">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Số lượng bán" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:BarSideBySideSeries2D ArgumentDataMember="ProductName" ValueDataMember="SumQuantity" DataSource="{Binding ReportDataList.DealDay}" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:BarSideBySideSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V}" dxc:BarSideBySideSeries2D.LabelPosition="Outside"></dxc:SeriesLabel>
+                                                </dxc:BarSideBySideSeries2D.Label>
+                                            </dxc:BarSideBySideSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+                                
+                                <!--Transaction-->
+                                <Grid Grid.Column="1">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Doanh thu" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisY>
+                                                <dxc:AxisY2D>
+                                                    <dxc:AxisY2D.NumericOptions>
+                                                        <dxc:NumericOptions Format="Number" Precision="0" />
+                                                    </dxc:AxisY2D.NumericOptions>
+                                                    <dxc:AxisY2D.Title>
+                                                        <dxc:AxisTitle Content="VNĐ" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisY2D.Title>
+                                                </dxc:AxisY2D>
+                                            </dxc:XYDiagram2D.AxisY>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>             
+                                                    <dxc:AxisX2D.Title>
+                                                        <dxc:AxisTitle Content="Ngày" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisX2D.Title>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:LineSeries2D ArgumentDataMember="Time" ValueDataMember="SumPrice" DataSource="{Binding ReportDataList2.DealDay}" ArgumentScaleType="Qualitative" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:LineSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V:#,0 'VNĐ'}"/>
+                                                </dxc:LineSeries2D.Label>
+                                            </dxc:LineSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </dx:DXTabItem>
+                    <dx:DXTabItem x:Name="Week" Header="Theo tuần" Glyph="{dx:DXImage Image=Calendar_32x32.png}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--Toolbar-->
+                            <Grid Grid.Row="0">
+                                <WrapPanel>
+                                    <TextBlock Text="Tuần" FontSize="20" Margin="0,0,15,0"></TextBlock>
+                                    <dxe:ComboBoxEdit Text="{Binding Time}" Height="30" Width="100" Margin="0,0,30,0">
+                                        <dxe:ComboBoxEditItem Content="1" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="2" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="3" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="4" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="5" FontSize="15"></dxe:ComboBoxEditItem>
+                                    </dxe:ComboBoxEdit>
+                                    <dx:SimpleButton Command="{Binding AnalyzeCommand}" CommandParameter="{Binding ElementName=Week}" Width="120" Content="Thống kê" Glyph="{dx:DXImage Image=PreviewChart_32x32.png}"></dx:SimpleButton>
+                                </WrapPanel>
+                            </Grid>
+                            <!--Biểu đồ-->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Master-->
+                                <Grid Grid.Column="0">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Số lượng bán" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:BarSideBySideSeries2D ArgumentDataMember="ProductName" ValueDataMember="SumQuantity" DataSource="{Binding ReportDataList.DealWeek}" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:BarSideBySideSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V}" dxc:BarSideBySideSeries2D.LabelPosition="Outside"></dxc:SeriesLabel>
+                                                </dxc:BarSideBySideSeries2D.Label>
+                                            </dxc:BarSideBySideSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+
+                                <!--Transaction-->
+                                <Grid Grid.Column="1">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Doanh thu" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisY>
+                                                <dxc:AxisY2D>
+                                                    <dxc:AxisY2D.NumericOptions>
+                                                        <dxc:NumericOptions Format="Number" Precision="0" />
+                                                    </dxc:AxisY2D.NumericOptions>
+                                                    <dxc:AxisY2D.Title>
+                                                        <dxc:AxisTitle Content="VNĐ" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisY2D.Title>
+                                                </dxc:AxisY2D>
+                                            </dxc:XYDiagram2D.AxisY>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.Title>
+                                                        <dxc:AxisTitle Content="Ngày" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisX2D.Title>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:LineSeries2D ArgumentDataMember="Time" ValueDataMember="SumPrice" DataSource="{Binding ReportDataList2.DealWeek}" ArgumentScaleType="Qualitative" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:LineSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V:#,0 'VNĐ'}"/>
+                                                </dxc:LineSeries2D.Label>
+                                            </dxc:LineSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </dx:DXTabItem>
+                    <dx:DXTabItem x:Name="Month" Header="Theo tháng" Glyph="{dx:DXImage Image=MonthView_32x32.png}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--Toolbar-->
+                            <Grid Grid.Row="0">
+                                <WrapPanel>
+                                    <TextBlock Text="Tháng" FontSize="20" Margin="0,0,15,0"></TextBlock>
+                                    <dxe:ComboBoxEdit Text="{Binding Time}" Height="30" Width="100" Margin="0,0,30,0">
+                                        <dxe:ComboBoxEditItem Content="1" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="2" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="3" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="4" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="5" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="6" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="7" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="8" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="9" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="10" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="11" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="12" FontSize="15"></dxe:ComboBoxEditItem>
+                                    </dxe:ComboBoxEdit>
+                                    <dx:SimpleButton Command="{Binding AnalyzeCommand}" CommandParameter="{Binding ElementName=Month}" Width="120" Content="Thống kê" Glyph="{dx:DXImage Image=PreviewChart_32x32.png}"></dx:SimpleButton>
+                                </WrapPanel>
+                            </Grid>
+                            <!--Biểu đồ-->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Master-->
+                                <Grid Grid.Column="0">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True" ShowArgumentLabels="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Số lượng bán" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:BarSideBySideSeries2D ArgumentDataMember="ProductName" ValueDataMember="SumQuantity" DataSource="{Binding ReportDataList.DealMonth}" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:BarSideBySideSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V}" dxc:BarSideBySideSeries2D.LabelPosition="Outside"></dxc:SeriesLabel>
+                                                </dxc:BarSideBySideSeries2D.Label>
+                                            </dxc:BarSideBySideSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+
+                                <!--Transaction-->
+                                <Grid Grid.Column="1">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Doanh thu" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisY>
+                                                <dxc:AxisY2D>
+                                                    <dxc:AxisY2D.NumericOptions>
+                                                        <dxc:NumericOptions Format="Number" Precision="0" />
+                                                    </dxc:AxisY2D.NumericOptions>
+                                                    <dxc:AxisY2D.Title>
+                                                        <dxc:AxisTitle Content="VNĐ" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisY2D.Title>
+                                                </dxc:AxisY2D>
+                                            </dxc:XYDiagram2D.AxisY>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.Title>
+                                                        <dxc:AxisTitle Content="Ngày" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisX2D.Title>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:LineSeries2D ArgumentDataMember="Time" ValueDataMember="SumPrice" DataSource="{Binding ReportDataList2.DealMonth}" ArgumentScaleType="Qualitative" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:LineSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V:#,0 'VNĐ'}"/>
+                                                </dxc:LineSeries2D.Label>
+                                            </dxc:LineSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </dx:DXTabItem>
+                    <dx:DXTabItem x:Name="Quarter" Header="Theo quý" Glyph="{dx:DXImage Image=FullWeekView_32x32.png}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--Toolbar-->
+                            <Grid Grid.Row="0">
+                                <WrapPanel>
+                                    <TextBlock Text="Quý" FontSize="20" Margin="0,0,15,0"></TextBlock>
+                                    <dxe:ComboBoxEdit Text="{Binding Time}" Height="30" Width="100" Margin="0,0,30,0">
+                                        <dxe:ComboBoxEditItem Content="1" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="2" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="3" FontSize="15"></dxe:ComboBoxEditItem>
+                                        <dxe:ComboBoxEditItem Content="4" FontSize="15"></dxe:ComboBoxEditItem>
+                                    </dxe:ComboBoxEdit>
+                                    <dx:SimpleButton Command="{Binding AnalyzeCommand}" CommandParameter="{Binding ElementName=Quarter}" Width="120" Content="Thống kê" Glyph="{dx:DXImage Image=PreviewChart_32x32.png}"></dx:SimpleButton>
+                                </WrapPanel>
+                            </Grid>
+                            <!--Biểu đồ-->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Master-->
+                                <Grid Grid.Column="0">
+                                    <dxc:ChartControl>
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Số lượng bán" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:BarSideBySideSeries2D ArgumentDataMember="ProductName" ValueDataMember="SumQuantity" DataSource="{Binding ReportDataList.DealQuarter}" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:BarSideBySideSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V}" dxc:BarSideBySideSeries2D.LabelPosition="Outside"></dxc:SeriesLabel>
+                                                </dxc:BarSideBySideSeries2D.Label>
+                                            </dxc:BarSideBySideSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+
+                                <!--Transaction-->
+                                <Grid Grid.Column="1">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Doanh thu" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisY>
+                                                <dxc:AxisY2D>
+                                                    <dxc:AxisY2D.NumericOptions>
+                                                        <dxc:NumericOptions Format="Number" Precision="0" />
+                                                    </dxc:AxisY2D.NumericOptions>
+                                                    <dxc:AxisY2D.Title>
+                                                        <dxc:AxisTitle Content="VNĐ" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisY2D.Title>
+                                                </dxc:AxisY2D>
+                                            </dxc:XYDiagram2D.AxisY>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.Title>
+                                                        <dxc:AxisTitle Content="Tháng" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisX2D.Title>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:LineSeries2D ArgumentDataMember="Time" ValueDataMember="SumPrice" DataSource="{Binding ReportDataList2.DealQuarter}" ArgumentScaleType="Qualitative" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:LineSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V:#,0 'VNĐ'}"/>
+                                                </dxc:LineSeries2D.Label>
+                                            </dxc:LineSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </dx:DXTabItem>
+                    <dx:DXTabItem x:Name="Year" Header="Theo năm" Glyph="{dx:DXImage Image=Today_32x32.png}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--Toolbar-->
+                            <Grid Grid.Row="0">
+                                <WrapPanel>
+                                    <TextBlock Text="Năm" FontSize="20" Margin="0,0,15,0"></TextBlock>
+                                    <dxe:ComboBoxEdit Text="{Binding Time}" ItemsSource="{Binding YearTime}" Height="30" Width="100" Margin="0,0,30,0">              
+                                    </dxe:ComboBoxEdit>
+                                    <dx:SimpleButton Command="{Binding AnalyzeCommand}" CommandParameter="{Binding ElementName=Year}" Width="120" Content="Thống kê" Glyph="{dx:DXImage Image=PreviewChart_32x32.png}"></dx:SimpleButton>
+                                </WrapPanel>
+                            </Grid>
+                            <!--Biểu đồ-->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Master-->
+                                <Grid Grid.Column="0">
+                                    <dxc:ChartControl>
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Số lượng bán" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:BarSideBySideSeries2D ArgumentDataMember="ProductName" ValueDataMember="SumQuantity" DataSource="{Binding ReportDataList.DealYear}" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:BarSideBySideSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V}" dxc:BarSideBySideSeries2D.LabelPosition="Outside"></dxc:SeriesLabel>
+                                                </dxc:BarSideBySideSeries2D.Label>
+                                            </dxc:BarSideBySideSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+
+                                <!--Transaction-->
+                                <Grid Grid.Column="1">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowValueLabels="True" ShowValueLine="True" ShowOutOfRangePoints="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Doanh thu" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisY>
+                                                <dxc:AxisY2D>
+                                                    <dxc:AxisY2D.NumericOptions>
+                                                        <dxc:NumericOptions Format="Number" Precision="0" />
+                                                    </dxc:AxisY2D.NumericOptions>
+                                                    <dxc:AxisY2D.Title>
+                                                        <dxc:AxisTitle Content="VNĐ" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisY2D.Title>
+                                                </dxc:AxisY2D>
+                                            </dxc:XYDiagram2D.AxisY>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.Title>
+                                                        <dxc:AxisTitle Content="Tháng" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisX2D.Title>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:LineSeries2D ArgumentDataMember="Time" ValueDataMember="SumPrice" DataSource="{Binding ReportDataList2.DealYear}" ArgumentScaleType="Qualitative" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:LineSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V:#,0 'VNĐ'}"/>
+                                                </dxc:LineSeries2D.Label>
+                                            </dxc:LineSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </dx:DXTabItem>
+                    <dx:DXTabItem x:Name="Period" Header="Theo khoảng thời gian" Glyph="{dx:DXImage Image=AgendaView_32x32.png}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--Toolbar-->
+                            <Grid Grid.Row="0">
+                                <WrapPanel>
+                                    <TextBlock Text="Từ" FontSize="20" Margin="0,0,15,0"></TextBlock>
+                                    <dxe:DateEdit DateTime="{Binding BeginTime}" Margin="0,0,30,0"></dxe:DateEdit>
+                                    <TextBlock Text="Đến" FontSize="20" Margin="0,0,15,0"></TextBlock>
+                                    <dxe:DateEdit DateTime="{Binding EndTime}" Margin="0,0,30,0"></dxe:DateEdit>
+                                    <dx:SimpleButton Command="{Binding AnalyzeCommand}" CommandParameter="{Binding ElementName=Period}" Width="120" Content="Thống kê" Glyph="{dx:DXImage Image=PreviewChart_32x32.png}"></dx:SimpleButton>
+                                </WrapPanel>
+                            </Grid>
+                            <!--Biểu đồ-->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Master-->
+                                <Grid Grid.Column="0">
+                                    <dxc:ChartControl>
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Số lượng bán" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:BarSideBySideSeries2D ArgumentDataMember="ProductName" ValueDataMember="SumQuantity" DataSource="{Binding ReportDataList.DealPeriod}" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:BarSideBySideSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V}" dxc:BarSideBySideSeries2D.LabelPosition="Outside"></dxc:SeriesLabel>
+                                                </dxc:BarSideBySideSeries2D.Label>
+                                            </dxc:BarSideBySideSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+
+                                <!--Transaction-->
+                                <Grid Grid.Column="1">
+                                    <dxc:ChartControl >
+                                        <dxc:ChartControl.CrosshairOptions>
+                                            <dxc:CrosshairOptions ShowArgumentLabels="True" ShowOutOfRangePoints="True" ShowValueLabels="True" ShowValueLine="True"/>
+                                        </dxc:ChartControl.CrosshairOptions>
+                                        <dxc:ChartControl.Titles>
+                                            <dxc:Title Content="Doanh thu" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                        </dxc:ChartControl.Titles>
+                                        <dxc:XYDiagram2D>
+                                            <dxc:XYDiagram2D.AxisY>
+                                                <dxc:AxisY2D>
+                                                    <dxc:AxisY2D.NumericOptions>
+                                                        <dxc:NumericOptions Format="Number" Precision="0" />
+                                                    </dxc:AxisY2D.NumericOptions>
+                                                    <dxc:AxisY2D.Title>
+                                                        <dxc:AxisTitle Content="VNĐ" FontSize="10" Visible="True"/>
+                                                    </dxc:AxisY2D.Title>
+                                                </dxc:AxisY2D>
+                                            </dxc:XYDiagram2D.AxisY>
+                                            <dxc:XYDiagram2D.AxisX>
+                                                <dxc:AxisX2D>
+                                                    <dxc:AxisX2D.QualitativeScaleOptions>
+                                                        <dxc:QualitativeScaleOptions AutoGrid="False" GridSpacing="1"/>
+                                                    </dxc:AxisX2D.QualitativeScaleOptions>
+                                                </dxc:AxisX2D>
+                                            </dxc:XYDiagram2D.AxisX>
+                                            <dxc:LineSeries2D ArgumentDataMember="PayDate" ValueDataMember="SumPrice" DataSource="{Binding ReportDataList2.DealPeriod}" ArgumentScaleType="DateTime" ColorEach="True" LabelsVisibility="True">
+                                                <dxc:LineSeries2D.Label>
+                                                    <dxc:SeriesLabel TextPattern="{}{V:#,0 'VNĐ'}"/>
+                                                </dxc:LineSeries2D.Label>
+                                            </dxc:LineSeries2D>
+                                        </dxc:XYDiagram2D>
+                                    </dxc:ChartControl>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </dx:DXTabItem>
+                </dx:DXTabControl>
+            </dx:DXTabItem>
+        </dx:DXTabControl>
+    </Grid>
+</Window>

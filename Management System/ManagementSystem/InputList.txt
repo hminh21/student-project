@@ -1,0 +1,21 @@
+﻿1. Master Data
+White Basic Tee Áo 120000 30
+Denim Jacket Áo 450000 15
+Vans Slipon Checkerboard Giày 1500000 10
+Jogger Pants Quần 300000 25
+Cargo Pants Quần 300000 25
+Blue Jeans Quần 400000 20
+Flame Old Skool Vans Giày 1600000 10
+
+2. Transaction Data
+Lưu Tuấn Nguyên 0901425358 162 Phạm Phú Thứ, Phường 10, Quận 6, TP HCM  21/11/2018 Denim Jacket 1
+Trương Minh Thông 0901543268 43 Hàn Hải Nguyên, Phường 5, Quận 11, TP HCM 14/01/2019 Jogger Pants 4 50% Happy Birthday
+Phạm Hoàng Minh 0912354831 183 Lê Thúc Hoạch, Phường Phú Thọ Hòa, Quận Tân Phú, TP HCM 02/01/2019 Denim Jacket 1
+Huỳnh Nguyễn Nhật Minh 0123245678 150 Phạm Phú Thứ, Phường 10, Quận 6, TP HCM 05/01/2019 White Basic Tee 2 
+Nguyễn Văn Phương Nghi 0162345623 123 Lê Trọng Tấn, Tân Hiệp, Huyện Hóc Môn, TP HCM 24/12/2017 Vans Slipon Checkerboard 1 50% Noel
+Lý Ngọc Thanh 0123245623 224 Lê Trọng Tấn, Phường 4, Quận Bình Tân, TP HCM 22/02/2019 White Yeezy Adidas 1 50% Happy Birthday
+Lữ Học Thuyền 0914523543 496 Hai Bà Trưng, Phường 10, Quận 3, TP HCM 20/01/2018  Cargo Pants 2
+Văn Nguyễn Phương Nhi 0123512325 47 Lê Đình Thám, Phường Phú Thọ Hòa, Quận Tân Phú, TP HCM 04/02/2019 Bomber Jacket 2
+Lý Triều Hoa 0125312355 45 Âu Cơ, Phường Phú Thọ Hòa, Quận Tân Phú, TP HCM 15/03/2019 Mesh Short 2
+Nguyễn Tiến Đức 0902548719 320 Lê Lai, Phường 5, Quận Gò Vấp, TP HCM 20/12/2017 Blue Jeans 1 
+
