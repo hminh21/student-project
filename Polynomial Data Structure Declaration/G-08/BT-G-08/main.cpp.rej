@@ -1,0 +1,9 @@
+diff a/BT-G-08/main.cpp b/BT-G-08/main.cpp	(rejected hunks)
+@@ -13,6 +13,7 @@
+ 	cout << "nguyen thi hong mo" << endl;
+ 	cout << "sonata" << endl;
+ 	cout << "Pham Hoang Minh" << endl;
++	cout << "Hoang Hoai Nhi" << endl;
+ 	_getch();
+ 	//updating luu
+ 	//updating 2
