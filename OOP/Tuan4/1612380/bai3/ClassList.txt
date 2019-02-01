@@ -1,0 +1,50 @@
+Lop 16CTT3
+Si so:   1
+Ho va ten:Luu Tuan Nguyen
+MSSV     :1612434
+Ngay Sinh:21/11/1998
+CMND     :031235922601204521163
+SDT      :01204521163
+Email    :miketuannguyen21@gmail.com
+
+-----------
+Lop 16CTT2
+Si so:   2
+Ho va ten:Pham Hoang Minh
+MSSV     :1612380
+Ngay Sinh:2/1/1998
+CMND     :012345678
+SDT      :01204521161
+Email    :shine020198@gmail.com
+
+Ho va ten:Nguyen Hoang Luu
+MSSV     :1612364
+Ngay Sinh:3/6/1998
+CMND     :042687922801204521143
+SDT      :01204521143
+Email    :hoangluu69@gmail.com
+
+-----------
+Lop 16CTT1
+Si so:   3
+Ho va ten:Pham Hoang Minh
+MSSV     :1612380
+Ngay Sinh:2/1/1998
+CMND     :012345678
+SDT      :01204521161
+Email    :shine020198@gmail.com
+
+Ho va ten:Nguyen Hoang Luu
+MSSV     :1612364
+Ngay Sinh:3/6/1998
+CMND     :042687922801204521143
+SDT      :01204521143
+Email    :hoangluu69@gmail.com
+
+Ho va ten:Luu Tuan Nguyen
+MSSV     :1612434
+Ngay Sinh:21/11/1998
+CMND     :031235922601204521163
+SDT      :01204521163
+Email    :miketuannguyen21@gmail.com
+

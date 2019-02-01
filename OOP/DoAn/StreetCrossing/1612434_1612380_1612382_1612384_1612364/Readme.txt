@@ -1,0 +1,1 @@
+Thay co the chay file .exe ma nhom em da release project ra san.

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f0c0d552-d6f3-4905-97dc-ecd8f9e53da0" name="StreetCrossing" linkedPackageId="d8090c3b-1995-4ea4-88a1-37c5109a49c2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="81993994-4e58-42d1-bf87-a57277aca50c" name="CGAME" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b7fcc387-0c95-4d6a-ae2c-b97489a26cf2" />
+        <targetEnds>
+          <association Id="a3424552-6954-4469-950d-df5a0de6dbaf" isDerived="false" sourceEndRoleName="CGAME" targetEndRoleName="CANIMAL" isLeaf="false" isAbstract="false">
+            <classMoniker Id="400d857f-b887-4f9a-9c7d-13f6eb7bb6a9" LastKnownName="CANIMAL" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="64302ef8-2752-49bd-bf6a-fa6e4f50ce6d" name="CGAME" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bad64c3b-c484-4959-b536-eab7dc89a0c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="508c030b-f85c-4dde-b63c-60ab1eb4758f" name="CANIMAL" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="768927a4-55a6-46c4-a725-f86e7a0ddce5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ec4d709-6a7b-4dec-bb38-43e727225d00" />
+          </association>
+          <association Id="0262ba51-296c-4bc9-aaf9-ec036fe7f6e7" isDerived="false" sourceEndRoleName="CGAME" targetEndRoleName="CLIGHT" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ba7842ad-1cb9-4453-b3ab-661bd3a50e46" LastKnownName="CLIGHT" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ae69bc1-af03-4948-af90-a50fdc164827" name="CGAME" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ad4ac16e-cdee-48a2-865b-dd23eeaa98c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a3a381ca-2153-4690-860a-dcf777a1b224" name="CLIGHT" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9c723490-2202-4f79-8a1e-2f5b20cc9eb0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="649c8c40-4ee7-40e4-9610-f85b1862e452" />
+          </association>
+          <association Id="ee9dc6b9-b1a4-451f-8d2d-7a7d7892b59b" isDerived="false" sourceEndRoleName="CGAME" targetEndRoleName="CPEOPLE" isLeaf="false" isAbstract="false">
+            <classMoniker Id="83154584-5cfe-46e7-b456-e3d0ecb1d947" LastKnownName="CPEOPLE" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7511bcf4-ae26-49cc-9806-45fccf48cd28" name="CGAME" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bd3919ae-a790-45cd-80b1-29090683bd55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0ed4ebb-a26f-4ceb-b302-985e34138090" name="CPEOPLE" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad6bcb21-2745-4cf4-a561-f8c89f50b2ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a9c56c6d-678a-4720-a765-54ea1d345052" />
+          </association>
+          <association Id="f9066f52-6a85-4372-ba1c-347acbfa6405" isDerived="false" sourceEndRoleName="CGAME" targetEndRoleName="CVEHICLE" isLeaf="false" isAbstract="false">
+            <classMoniker Id="31816c6c-99da-4174-b08c-45199dd58a7e" LastKnownName="CVEHICLE" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="416a017d-bb74-4b8a-912c-9d71e2070cfa" name="CGAME" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5f860039-e03f-4101-a433-5a70f19d1951" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="984e9b3f-1acd-43c9-b81e-18ab66098728" name="CVEHICLE" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6fa30784-4e1a-48c1-a499-7df4280b4a41" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e7bcaaf5-bc47-4c69-ac26-612024dfd79c" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="9af01536-b07d-430c-b790-2ce5068d0a12" name="axt" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a0ff99fe-b983-488e-9f54-fb2f11241706" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f3810de6-1767-4218-9a18-0aab70c50b69" LastKnownName="CTRUCK*" />
+            </type_NamedElement>
+          </property>
+          <property Id="9a84d0d9-34a1-432e-8689-3c35bdd60321" name="axh" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7545bcdb-71c1-463a-8a0c-44bf2370afc3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="efb406c7-a450-4572-9698-83d22b3f27e2" LastKnownName="CCAR*" />
+            </type_NamedElement>
+          </property>
+          <property Id="cfc34cfa-2053-458a-ab38-217776ce59bf" name="akl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2f0c5b97-b473-45e6-9548-d7f076891dbd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0d059f09-375e-4541-946a-ec305bf646ae" LastKnownName="CDINOSAUR*" />
+            </type_NamedElement>
+          </property>
+          <property Id="db773c34-d3ce-4a49-a7bc-d586997769ba" name="ac" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="957a0a73-414b-4780-babb-1d6540ed839b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="375b3ce7-1900-4b45-8c17-4622d65ff052" LastKnownName="CBIRD*" />
+            </type_NamedElement>
+          </property>
+          <property Id="6746a088-8666-436f-b271-192c88b22606" name="li" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="503ea6c2-b3d0-47f8-ac49-5b83026c1ed1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d6887f11-f5d4-459e-8962-b5e9d01f5d7e" LastKnownName="CLIGHT *" />
+            </type_NamedElement>
+          </property>
+          <property Id="d0c2c3cb-47d1-4dc4-82b1-9b37183612b9" name="cn" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="84d0d904-9822-4afa-abf4-213416db769e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6e24240b-7838-49ac-a124-f53c4a4282a6" LastKnownName="CPEOPLE" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="83154584-5cfe-46e7-b456-e3d0ecb1d947" name="CPEOPLE" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3d9f0dc8-fd50-4c0d-a234-0f74fc24a282" />
+        <ownedAttributesInternal>
+          <property Id="17c71185-64fb-40bf-ae68-f163eaf36a28" name="mX, mY" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27c03103-0ab6-46f8-9698-32e6c38230f3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="26496ad6-4fe7-49d3-8c6d-e8fb761ac9c1" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="9a2621d5-c5b5-4c51-80db-0025a6ac1b41" name="objectColor" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27f10aaa-e51f-4e92-8a9b-4686265e323d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="26496ad6-4fe7-49d3-8c6d-e8fb761ac9c1" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="3545abcb-7986-403f-95f2-932396761fe9" name="mState" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f088cb1a-5192-43a6-b2c0-427db12fd4f8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="983ac80d-7405-40e8-b22b-3d3e56b530db" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="efb406c7-a450-4572-9698-83d22b3f27e2" name="CCAR*" isAbstract="false" isLeaf="false" cachedFullName="CCAR*">
+        <elementDefinition Id="581c2fcf-049d-41eb-9243-296904647bbd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="375b3ce7-1900-4b45-8c17-4622d65ff052" name="CBIRD*" isAbstract="false" isLeaf="false" cachedFullName="CBIRD*">
+        <elementDefinition Id="aa2d0769-9b97-4e07-8047-9c82700ef36e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0d059f09-375e-4541-946a-ec305bf646ae" name="CDINOSAUR*" isAbstract="false" isLeaf="false" cachedFullName="CDINOSAUR*">
+        <elementDefinition Id="9b283f51-ae74-4ada-a982-39c4397d2807" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f3810de6-1767-4218-9a18-0aab70c50b69" name="CTRUCK*" isAbstract="false" isLeaf="false" cachedFullName="CTRUCK*">
+        <elementDefinition Id="1be1c309-7f57-4c98-9049-667103ea5f7d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d6887f11-f5d4-459e-8962-b5e9d01f5d7e" name="CLIGHT *" isAbstract="false" isLeaf="false" cachedFullName="CLIGHT *">
+        <elementDefinition Id="27f4db47-c812-41d9-b45e-716b75f6ee6c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6e24240b-7838-49ac-a124-f53c4a4282a6" name="CPEOPLE" isAbstract="false" isLeaf="false" cachedFullName="StreetCrossing::CPEOPLE">
+        <elementDefinition Id="3d9f0dc8-fd50-4c0d-a234-0f74fc24a282" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="983ac80d-7405-40e8-b22b-3d3e56b530db" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="1a342499-7fd4-4e1b-bfa4-431f4beae2c9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="26496ad6-4fe7-49d3-8c6d-e8fb761ac9c1" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="c3366b7c-de5c-48e9-b4b5-9cad4670185a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="31816c6c-99da-4174-b08c-45199dd58a7e" name="CVEHICLE" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6976e2e8-be1a-4fa3-b772-8b6631766232" />
+        <ownedAttributesInternal>
+          <property Id="3594245c-b333-451e-8294-4795dae91ddd" name="mX, mY" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="66dc4f78-c9f0-44d2-b670-caffe5e5a25b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="26496ad6-4fe7-49d3-8c6d-e8fb761ac9c1" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="aec9350d-512c-4ec2-8e37-a51bfa537ccc" name="objectColor" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cc496e4c-a69c-4d32-89ed-02333746b251" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="26496ad6-4fe7-49d3-8c6d-e8fb761ac9c1" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="0bf458eb-c67e-4090-89d3-e17d7c8144aa" name="isInvalid" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="393cd555-1b30-48de-b2fd-39e6ca9c7abd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="983ac80d-7405-40e8-b22b-3d3e56b530db" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="400d857f-b887-4f9a-9c7d-13f6eb7bb6a9" name="CANIMAL" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a65a1abf-83a1-4b3e-b75e-c596746977de" />
+        <ownedAttributesInternal>
+          <property Id="309a901d-ee68-4be8-ab29-e9a71ea2bfc6" name="mX, mY" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8da46fe3-7a44-4285-949c-38d66f3be9cd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9c8483be-3221-4a70-9dfa-87c740cc7b79" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="c6b52b1c-9dd3-4a81-92d1-32da7590416c" name="objectColor" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="41f22be1-c1ec-4986-9296-9cdca1a5d074" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="26496ad6-4fe7-49d3-8c6d-e8fb761ac9c1" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="7808943a-a8f1-4767-a36d-3fb0f85164a5" name="isInvalid" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b523f8c6-8141-4b6d-aa95-86fc363681ee" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="983ac80d-7405-40e8-b22b-3d3e56b530db" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9c8483be-3221-4a70-9dfa-87c740cc7b79" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="c3366b7c-de5c-48e9-b4b5-9cad4670185a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ba7842ad-1cb9-4453-b3ab-661bd3a50e46" name="CLIGHT" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c8f61d74-73ae-447a-b0a7-939eaa00b047" />
+        <ownedAttributesInternal>
+          <property Id="e54e6274-c43e-466d-ba5a-2cb4bf0d67d9" name="mX, mY" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c32102cc-c83a-41c0-919a-151cb02698eb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="26496ad6-4fe7-49d3-8c6d-e8fb761ac9c1" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="394f7b94-656c-4ee8-8eab-d81c654a6134" name="light[2]" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="ac8f811e-e074-4c00-b800-276bccf57995" name="Lower" value="1">
+                <elementDefinition Id="f0fdcfe3-9730-4b06-b0d8-f93859d841cd" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="a2c0d59f-c2c1-4dbc-b8a7-3b584cc85db3" name="Upper" value="1">
+                <elementDefinition Id="fc66d3f8-b8fc-424a-9fdd-4005329548ed" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="b05fa0ba-dc13-4cbe-9c8c-de323d6ede5b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="16ce0102-9902-4fcd-9b0e-aabcdc49c2f9" LastKnownName="char" />
+            </type_NamedElement>
+          </property>
+          <property Id="0e284496-62db-4d66-9b19-4fcddb6666fb" name="status" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a6cf27f9-abe0-418d-8fbd-b8dadc1f563a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6e5a3f1e-4c83-4591-8fac-f6fa7fa3a75e" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+          <property Id="0b4d6230-5eee-4f49-b533-b36f3744d257" name="Time" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de411531-043c-423b-9139-c0f07b525965" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ed261e31-c4d6-471a-922a-663a986721f3" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="16ce0102-9902-4fcd-9b0e-aabcdc49c2f9" name="char" isAbstract="false" isLeaf="false" cachedFullName="char">
+        <elementDefinition Id="d6fda7da-9cf4-40aa-9ccb-1a55e720abb6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6e5a3f1e-4c83-4591-8fac-f6fa7fa3a75e" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="1a342499-7fd4-4e1b-bfa4-431f4beae2c9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ed261e31-c4d6-471a-922a-663a986721f3" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="c3366b7c-de5c-48e9-b4b5-9cad4670185a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8e26125c-cc52-474e-8667-cc0b0defc31e" name="CTRUCK" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="663c4ffa-0e65-4950-acb7-bd58d54fe13d" />
+        <generalsInternal>
+          <generalization Id="bc9ec152-7242-4ca7-8cd3-52d557d36a39" isSubstitutable="false">
+            <classMoniker Id="31816c6c-99da-4174-b08c-45199dd58a7e" LastKnownName="CVEHICLE" />
+            <elementDefinition Id="9540e8db-e8b5-4660-9515-4773eee90e8c" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f3d431f2-6adf-4556-bd7a-d02ca54358c7" name="CCAR" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="941db05a-17b5-444c-82fc-8f249332eb84" />
+        <generalsInternal>
+          <generalization Id="e315aa13-56f4-40a9-aca8-cdd568fa9c91" isSubstitutable="false">
+            <classMoniker Id="31816c6c-99da-4174-b08c-45199dd58a7e" LastKnownName="CVEHICLE" />
+            <elementDefinition Id="8820dea0-7e0b-4b27-9d1c-3ebb5ddf5127" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6d1392cf-290c-4d9a-83fe-445573da7ed8" name="CBIRD" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ee689a95-851e-453e-8ec0-10757b52f0e6" />
+        <generalsInternal>
+          <generalization Id="45770fa5-48fb-4655-9dd2-2a2db81d5481" isSubstitutable="false">
+            <classMoniker Id="400d857f-b887-4f9a-9c7d-13f6eb7bb6a9" LastKnownName="CANIMAL" />
+            <elementDefinition Id="29cace6e-5536-4cdb-9ed6-a46db8492423" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="54eb9cd1-5a63-4092-ad7a-a1d41c5d7883" name="CDINOSAUR" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6ad47931-cf93-405f-952f-7a182f5a25d5" />
+        <generalsInternal>
+          <generalization Id="8b17f2dd-02c8-40a0-b4ca-8799126dd11f" isSubstitutable="false">
+            <classMoniker Id="400d857f-b887-4f9a-9c7d-13f6eb7bb6a9" LastKnownName="CANIMAL" />
+            <elementDefinition Id="124628d9-5129-47b0-b7bb-40ea5fb7f9c7" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d8090c3b-1995-4ea4-88a1-37c5109a49c2" name="StreetCrossing">
+    <elementDefinition Id="7aa50f44-74a3-450a-bb53-72d9515b2073" />
+    <profileInstances>
+      <packageHasProfileInstances Id="883f0fbf-c912-44a2-adab-b1786f92eb8c">
+        <profileInstance Id="3974c88c-5226-4d12-9a65-f122027e33b4" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="cf7b6c15-5b5c-414a-9d46-9ffe7f9794dc">
+        <profileInstance Id="5394302c-35b4-4ca5-afaf-4bc8ac2e6fa3" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

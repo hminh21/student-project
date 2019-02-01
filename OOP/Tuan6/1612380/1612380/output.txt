@@ -1,0 +1,72 @@
+--------------- Con vat 1 ---------------
+Bo
+Ma so:2
+Can nang:50
+Tuoi:430 ngay
+Tuoi doi:6611 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(4,5)
+--------------- Con vat 2 ---------------
+Heo
+Ma so:9
+Can nang:30
+Tuoi:350 ngay
+Tuoi doi:2772 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(7,9)
+--------------- Con vat 3 ---------------
+Heo
+Ma so:3
+Can nang:34
+Tuoi:265 ngay
+Tuoi doi:3779 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(4,2)
+--------------- Con vat 4 ---------------
+Bo
+Ma so:12
+Can nang:75
+Tuoi:500 ngay
+Tuoi doi:6790 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(23,34)
+--------------- Con vat 5 ---------------
+Ga
+Ma so:21
+Can nang:3
+Tuoi:198 ngay
+Tuoi doi:2744 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(10,20)
+--------------- Con vat 6 ---------------
+Cuu
+Ma so:30
+Can nang:30
+Tuoi:175 ngay
+Tuoi doi:5504 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(15,50)
+--------------- Con vat 7 ---------------
+Ga
+Ma so:45
+Can nang:4
+Tuoi:121 ngay
+Tuoi doi:3083 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(45,34)
+--------------- Con vat 8 ---------------
+Cuu
+Ma so:49
+Can nang:34
+Tuoi:456 ngay
+Tuoi doi:4538 ngay
+Muc do no:0.5
+Trang thai:Dang no
+Toa do:(20,60)
