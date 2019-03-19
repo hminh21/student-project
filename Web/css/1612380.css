@@ -1,0 +1,269 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: url(../images/bg-body.jpg) no-repeat top center #20101f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    color: #808080;	
+}
+
+#main-content
+{
+	background: url(../images/bg-page.jpg) repeat-x top #f7f7f7;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#header
+{
+	padding: 30px 30px 20px 30px;
+    height: 100px;
+}
+
+#middle
+{
+	width: 940px;
+    margin: 0 auto;
+	padding: 0 0 30px 0;
+}
+
+.set-pos
+{
+	width: 940px;
+    margin: 0 auto;
+	padding: 0 0 30px 0;
+}
+
+#bottom
+{
+	background: url(../images/bg-bottom.jpg) no-repeat top left;
+    width: 1002px;
+    height: 164px;
+    margin: 0 auto;
+    color: #1d1d1d;
+    padding: 30px 0 0 0;
+}
+
+#small-content
+{
+	height: 400px;
+    padding: 0 0 30px 0;
+}
+.container-fluid
+{
+	padding: 0 0 15px 0;
+}
+.clear
+{
+	clear: both;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+}
+
+#small-content
+{
+	display: flex;
+	justify-content: center;
+}
+
+#big-image h1
+{
+	font-size: 34px;
+    color: #00000a;
+    text-align: center;
+    font-family: HelveticaMC;
+    font-weight: bold;
+    height: 60px;
+}
+
+.try-container
+{
+	height: 100px;
+}
+#text-with-arrow-left
+{
+    background: url(../images/down-left.png) no-repeat right 2px;
+    height: 85px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    padding: 0 55px 0 0;
+    font-family: HelveticaLC;
+    color: #5790dc;
+    font-size: 22px;
+}
+
+.list-features .row
+{
+	height: 180px;
+}
+
+.list-features h3
+{
+	color: #00000a;
+    font-family: HelveticaMC;
+    font-size: 21px;
+	font-weight: bold;
+	position: absolute;
+	top: 0px;
+	left: 100px;
+}
+
+.list-features p
+{
+	padding: 10px 0 0 0;
+    text-align: justify;
+	position: absolute;
+	top: 20px;
+	left: 100px;
+}
+
+#quote h4
+{
+	font-size: 22px;
+    color: #5790dc;
+    font-family: HelveticaLC;
+    padding: 0 0 10px 0;
+	font-style: italic;
+}
+
+#quote p
+{
+	background: url(../images/bg-quote.jpg) repeat-x top #f1f1f1;
+    border-top: 1px solid #c2c2c2;
+    border-left: 1px solid #c2c2c2;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 938px;
+    position: relative;
+	text-align: center;
+	font-style: italic;
+	padding: 30px 30px 30px 30px;
+}
+
+#author 
+{
+	background: url(../images/bg-author.jpg) no-repeat top right;
+    padding: 0 30px 0 0;
+    margin: -18px 20px 0 0;
+    text-align: right;
+    position: relative;
+    line-height: 34px;
+	height: 50px;
+}
+
+#text-with-arrow-right
+{
+	background: url(../images/down-right.png) no-repeat top left;
+    padding: 50px 0 20px 110px;
+    font-family: HelveticaLC;
+    color: #5790dc;
+    font-size: 22px;
+    position: absolute;
+    top: -35px;
+    left: 35px;
+}
+
+#map
+{
+	position:absolute;
+	top: 30px;
+	left: 250px;
+}
+
+#bottom h5
+{
+	font-size: 18px;
+    font-family: HelveticaMc;
+    color: #00000a;
+	font-weight: bold;
+}
+
+.social-contact
+{
+	list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-contact li
+{
+	width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+}
+
+.social-contact li a
+{
+	display: block;
+    float: left;
+    background: url(../images/social-icons.png) no-repeat 0 0;
+    width: 24px;
+    height: 24px;
+}
+
+.social-contact li .linkedin
+{
+	background-position: 0 -24px;
+}
+
+.social-contact li .facebook
+{
+	background-position: 0 -48px;
+}
+.social-contact li .digg
+{
+	background-position: 0 -72px;
+}
+.social-contact li .devi
+{
+	background-position: 0 -96px;
+}
+
+.social-contact li .twitter
+{
+	background-position: 0 -120px;
+}
+
+#footer
+{
+	background: url(../images/bg-footer.jpg) no-repeat top left;
+	width: 1002px;
+    height: 35px;
+    margin: 0 -31px;
+    line-height: 35px;
+}
+
+#footer .float-left
+{
+	padding-left: 10px;
+}
+
+#footer ul
+{
+	padding-right: 5px;
+}
+
+#footer ul li
+{
+	display: inline-block;
+	border-left: 1px solid #1d1d1d;
+    line-height: 12px;
+    padding: 0 5px 0 7px;
+}
+
+#footer ul li:first-child
+{
+	border-left: 0;
+}
+
+#footer ul li a
+{
+	color: #1d1d1d;
+}
+
